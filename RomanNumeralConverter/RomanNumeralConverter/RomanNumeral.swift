@@ -1,6 +1,14 @@
-//: Roman Numerals Converter
+//
+//  RomanNumeral.swift
+//  RomanNumeralConverter
+//
+//  Created by Smashing Boxes on 7/24/15.
+//  Copyright (c) 2015 Smashing Boxes. All rights reserved.
+//
 
-struct RomanNumeralConverter {
+import Foundation
+
+struct RomanNumeral {
   var numeralDictionary: [Int: String] = [
     1: "I",
     4: "IV",
@@ -17,6 +25,7 @@ struct RomanNumeralConverter {
     1000: "M"
   ]
   
+  // Converts a number to its RN equivalent
   func romanize(var number: Int) -> String {
     var romanNumeralString: String = ""
     while number > 0 {
@@ -41,26 +50,3 @@ struct RomanNumeralConverter {
     return largestKey
   }
 }
-
-// Testing
-let converter = RomanNumeralConverter()
-converter.romanize(1000)
-converter.romanize(900)
-converter.romanize(700)
-converter.romanize(500)
-converter.romanize(450)
-converter.romanize(225)
-converter.romanize(75)
-converter.romanize(37)
-converter.romanize(18)
-converter.romanize(9)
-converter.romanize(4)
-converter.romanize(2)
-converter.romanize(1)
-
-
-
-
-
-
-
